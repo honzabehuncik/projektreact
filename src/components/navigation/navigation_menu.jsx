@@ -1,4 +1,5 @@
 import React from 'react';
+import './_navigation_styles.css';
 
 function NavigationMenu() {
     return (

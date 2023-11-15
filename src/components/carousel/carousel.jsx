@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import '../carousel.css';
+import './_carousel_styles.css';
 
 const images = [
-    'image1.jpg',
-    'image2.jpg',
-    'image3.jpg',
-    'image4.jpg',
+    'img_1.jpg',
+    'img_2.jpg',
+    'img_3.png',
 ];
 
 function Carousel() {
@@ -22,13 +21,13 @@ function Carousel() {
 
     return (
         <div classname="carousel">
-            <button onclick="{prevSlide}">Předchozí</button>
+            <button onClick={nextSlide}>Předchozí</button>
             <transitiongroup classname="carousel-slide">
                 <csstransition key="{index}" timeout="{500}" classnames="slide">
                     <img src={images[index]} alt={`Slide ${index + 1}   `} />
                 </csstransition>
             </transitiongroup>
-            <button onclick="{nextSlide}">Další</button>
+            <button onClick={prevSlide}>Další</button>
         </div>
     );
 }

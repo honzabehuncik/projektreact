@@ -1,8 +1,8 @@
 import {useState} from "react";
 import './App.css';
-import NavigationMenu from "./components/navigation_menu";
-import Portfolio from "./pages/portfolio";
-import Carousel from "./components/carousel";
+import NavigationMenu from "./components/navigation/navigation_menu";
+import Portfolio from "./components/pages/portfolio";
+import Carousel from "./components/carousel/carousel";
 
 function App() {
     return (
