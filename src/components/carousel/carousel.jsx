@@ -21,14 +21,27 @@ function Carousel() {
 
     return (
         <div classname="carousel">
-            <button onClick={nextSlide}>Předchozí</button>
+            <a className="button" onClick={nextSlide} href="#" style={{'--color': '#ff1867'}}>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Předchozí
+            </a>
             <transitiongroup classname="carousel-slide">
                 <csstransition key="{index}" timeout="{500}" classnames="slide">
                     <img src={images[index]} alt={`Slide ${index + 1}   `} />
                 </csstransition>
             </transitiongroup>
-            <button onClick={prevSlide}>Další</button>
+            <a className="button" onClick={prevSlide} href="#" style={{'--color': '#ff1867'}}>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Další
+            </a>
         </div>
+
     );
 }
 
