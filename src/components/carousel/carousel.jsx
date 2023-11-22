@@ -5,7 +5,7 @@ import './_carousel_styles.css';
 const images = [
     'img_1.jpg',
     'img_2.jpg',
-    'img_3.png',
+    'img_3.jpg',
 ];
 
 function Carousel() {

@@ -6,9 +6,11 @@ import Carousel from "./components/carousel/carousel";
 
 function App() {
     return (
-        <NavigationMenu></NavigationMenu>,
-        <Portfolio></Portfolio>,
+        <div>
+            <NavigationMenu></NavigationMenu>
+            <Portfolio></Portfolio>
             <Carousel></Carousel>
+        </div>
     );
 }
 
