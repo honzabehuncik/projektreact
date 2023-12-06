@@ -1,0 +1,131 @@
+/* Resetování stylů */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Globální styly */
+body {
+  font-family: 'Overpass Mono', monospace !important;
+  background-color: #282C34 !important;
+  color: #ABB2BF !important;
+}
+
+/* Původní styly pro body a ostatní globální styly */
+
+/* Kontejner pro efekt glassmorphismu */
+.background-effects {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Posunutí pod obsah stránky */
+  background-color: rgba(40, 44, 52, 0.8); /* Barva s průhledností pro efekt */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Vytvoření trojúhelníků pro svítící vzory s větším rozmazáním a "glow" efektem */
+.background-effects::before {
+  content: "";
+  position: absolute;
+  width: 200px; /* Velikost kolečka */
+  height: 200px; /* Velikost kolečka */
+  border-radius: 50%; /* Kruhový tvar */
+  opacity: 0.6; /* Průhlednost svítících koleček */
+  filter: blur(80px); /* Větší rozmazání */
+  box-shadow: 0 0 20px 10px #E06C75; /* "Glow" efekt */
+}
+
+.background-effects::before {
+  top: 50%; /* Umístění kolečka uprostřed vertikálně */
+  left: 80%; /* Umístění kolečka uprostřed horizontálně */
+  transform: translate(-50%, -50%); /* Posunutí kolečka zpět o polovinu jeho vlastní velikosti */
+  background: #E06C75; /* Barva kolečka */
+}
+
+/* Ostatní styly pro obsah stránky */
+.content {
+  position: relative;
+  z-index: 1; /* Posunutí nad kontejner s efektem */
+  /* Další styly podle potřeby */
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px !important;
+}
+
+.logo {
+  font-weight: bold;
+  color: #E06C75;
+}
+
+.logo-text {
+  font-size: 1.7em;
+}
+
+.links a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: #ABB2BF;
+  font-size: 1.3em;
+}
+
+.links a:hover {
+  color: #E06C75;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-title {
+  font-size: 4.5em !important;
+  font-weight: bold !important;
+  margin-top: 40%;
+  color: #E06C75;
+  text-align: left; /* Zarovnání titulu na levou stranu */
+}
+
+.hero-description {
+  font-size: 1.8em !important; /* Zvětšení popisu */
+  text-align: left; /* Zarovnání popisu na levou stranu */
+}
+
+.highlighted {
+  color: #FFFFFF; /* Jiná barva pro zvýrazněné texty */
+}
+
+.highlighted_yellow {
+  color: #E5C07B;
+}
+
+.highlighted_green {
+  color: #98C379;
+}
+
+.highlighted_purple {
+  color: #C678DD;
+}
+
+.hero-image {
+  flex: 1;
+  border-radius: 53px;
+  /* Zde můžete přidat obrázek */
+}
+

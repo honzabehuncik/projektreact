@@ -1,15 +1,19 @@
 import {useState} from "react";
 import './App.css';
+import './styles.css';
 import NavigationMenu from "./components/navigation/navigation_menu";
-import Portfolio from "./components/pages/portfolio";
-import Carousel from "./components/carousel/carousel";
+import Homepage from "./components/pages/homepage";
+import {Container} from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
     return (
         <div>
-            <NavigationMenu></NavigationMenu>
-            <Portfolio></Portfolio>
-            <Carousel></Carousel>
+            <Container>
+                <NavigationMenu></NavigationMenu>
+                <div className="background-effects"></div>
+                <Homepage></Homepage>
+            </Container>
         </div>
     );
 }
