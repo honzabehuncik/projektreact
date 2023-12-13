@@ -8,7 +8,7 @@
 /* Globální styly */
 body {
   font-family: 'Overpass Mono', monospace !important;
-  background-color: #282C34 !important;
+    background-color: #1E1E1E !important;
   color: #ABB2BF !important;
 }
 
@@ -22,7 +22,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1; /* Posunutí pod obsah stránky */
-  background-color: rgba(40, 44, 52, 0.8); /* Barva s průhledností pro efekt */
+  background-color: rgba(40, 44, 52, 0.4); /* Barva s průhledností pro efekt */
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -80,7 +80,8 @@ body {
 }
 
 .links a:hover {
-  color: #E06C75;
+  color: #E06C75 !important;
+  cursor: pointer;
 }
 
 .hero {
@@ -99,16 +100,18 @@ body {
   font-weight: bold !important;
   margin-top: 40%;
   color: #E06C75;
-  text-align: left; /* Zarovnání titulu na levou stranu */
+  text-align: left;
 }
 
 .hero-description {
-  font-size: 1.8em !important; /* Zvětšení popisu */
-  text-align: left; /* Zarovnání popisu na levou stranu */
+  font-size: 1.8em !important;
+  text-align: left;
+  margin-bottom: 50%;
+  line-height: normal;
 }
 
 .highlighted {
-  color: #FFFFFF; /* Jiná barva pro zvýrazněné texty */
+  color: #FFFFFF;
 }
 
 .highlighted_yellow {
@@ -123,9 +126,113 @@ body {
   color: #C678DD;
 }
 
+.highlighted_blue {
+  color: #61AFEF;
+}
+
 .hero-image {
   flex: 1;
   border-radius: 53px;
-  /* Zde můžete přidat obrázek */
+  /* image import */
 }
 
+.aboutme-title {
+  color: #E06C75;
+  font-weight: bold;
+  font-size: 3.4em;
+}
+
+.aboutme-description {
+  width: 800px;
+  height: 271px;
+  flex-shrink: 0;
+  color: #ABB2BF;
+  font-size: 1.4em;
+  line-height: normal;
+}
+
+.skills-title {
+  color: #E06C75;
+  font-weight: bold;
+  font-size: 3.4em;
+}
+
+.skills-description {
+  height: 271px;
+  font-size: 1.4em;
+  line-height: normal;
+}
+
+/* Styly pro sekci feedback */
+.feedback {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Styly pro titulek reference */
+.feedback-title {
+  color: #E06C75;
+  font-weight: bold;
+  font-size: 3.4em;
+  margin-right: 20px; /* Vzdálenost mezi titulkem a obsahem */
+}
+
+/* Styly pro prvni feedback */
+.first-feedback {
+  display: flex;
+  align-items: center;
+}
+/* Styly pro sekci feedback */
+.feedback {
+  display: flex;
+  flex-direction: column; /* Uspořádání ve sloupci pro nadpis a obsah */
+  align-items: flex-start; /* Zarovnání obsahu vlevo */
+  margin-bottom: 20px;
+  text-align: left; /* Zarovnání textu vlevo */
+}
+
+/* Styly pro titulek reference */
+.feedback-title {
+  color: #E06C75;
+  font-weight: bold;
+  font-size: 3.4em;
+  margin-bottom: 20px; /* Odstup mezi nadpisem a obsahem */
+}
+
+/* Styly pro prvni feedback */
+.first-feedback {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+/* Styly pro obrázek */
+.feedback-img {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: 23px;
+  background-image: url("https://s3-alpha-sig.figma.com/img/9417/e8c1/b2b85f386df9998239f662884e2506c8?Expires=1702857600&Signature=WL6Ma0g0l4uSMS7qUlVxXJCVWeuiQhFgqzYeiIFm~bzML5bZyY6GjZL2XUBhOe8B6-BI2bJae-qr5OzVFgs4tr1V7VQVvaVPyfgcLRDe4jHJV1-awYixf08knLo49WvZd72K8i9~l7C428humcLflRM5aY9JfTdwkQQPvSrDJy1tNYct6G-MiMpqvihucU~XPvjoYZQ2n21~ggS-8QUi0AW8CfVYYABxJmcOY7-3tDaXYeyGTGd4GoxEYKTCRBxoBE-0obetFpltPULmgL2DvflPmfAhuuR4qK73fwao2gAZ3-XaFovKdb1nQUNT6JvOm~erU1npuCWRhd8NrI6PEA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+  background-color: lightgray;
+  background-size: cover;
+  background-position: center center;
+  margin-right: 20px; /* Vzdálenost mezi obrázkem a textem */
+  align-self: flex-start; /* Zarovnání obrázku k hornímu okraji */
+}
+
+/* Styly pro popisek */
+.feedback-description {
+  width: 800px;
+  font-size: 1.4em;
+  line-height: normal;
+  text-align: left; /* Zarovnání textu vlevo */
+}
+
+/* Styly pro nadpis a odstavec uvnitř popisku */
+.feedback-description h3 {
+  margin-top: 0;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #E06C75;
+}

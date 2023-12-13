@@ -1,29 +1,30 @@
 import React from 'react';
 import './../../styles.css';
 import { Container } from 'react-bootstrap';
-import { TypeAnimation } from 'react-type-animation'; // Import knihovny react-type-animation
+import { TypeAnimation } from 'react-type-animation';
+import {introdata, socials } from '../../data';
 
 function Homepage() {
     return (
-        <div>
+        <div id="home">
             <Container>
                 <section className="hero">
                     <div className="hero-content text-center">
-                        <h1 className="hero-title display-3">Honza Běhunčík</h1>
+                        <h1 className="hero-title display-3">{introdata.title}</h1>
                         <p className="hero-description lead">
                             <span className="highlighted_yellow">string</span> zamereni ={' '}
                             <span className="highlighted_green">
-                <TypeAnimation // Vložení komponenty TypeAnimation
+                <TypeAnimation
                     sequence={[
-                        'Student',
+                        `"Student"`,
                         1000,
-                        'Vývojář',
+                        `"Vývojář"`,
                         1000,
-                        'Grafik',
+                        `"Grafik"`,
                         1000
                     ]}
                     wrapper="span"
-                    speed={50}
+                    speed={200}
                     style={{ display: 'inline-block' }}
                     repeat={Infinity}
                 />

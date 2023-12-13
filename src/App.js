@@ -1,18 +1,31 @@
-import {useState} from "react";
+import {useState, useRef } from "react";
 import './App.css';
 import './styles.css';
 import NavigationMenu from "./components/navigation/navigation_menu";
 import Homepage from "./components/pages/homepage";
 import {Container} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import AboutMe from "./components/pages/about_me";
 
 function App() {
+    const homeRef = useRef(null);
+    const aboutRef = useRef(null);
+
+    const scrollToSection = (ref) => {
+        ref.current.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <div>
             <Container>
-                <NavigationMenu></NavigationMenu>
+                <NavigationMenu
+                    scrollToAbout={() => scrollToSection(aboutRef)}
+                ></NavigationMenu>
                 <div className="background-effects"></div>
                 <Homepage></Homepage>
+                <div ref={aboutRef}>
+                    <AboutMe />
+                </div>
             </Container>
         </div>
     );
