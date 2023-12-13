@@ -2,9 +2,12 @@ import React from 'react';
 import './../../styles.css';
 import { Container } from 'react-bootstrap';
 import { TypeAnimation } from 'react-type-animation';
-import {introdata, socials } from '../../data';
+import {introdata, focusData } from '../../data';
 
 function Homepage() {
+    const focusSequence = [
+        ...focusData.map((item, index) => [`"${item}"`, 1000]),
+    ].flat();
     return (
         <div id="home">
             <Container>
@@ -15,14 +18,7 @@ function Homepage() {
                             <span className="highlighted_yellow">string</span> zamereni ={' '}
                             <span className="highlighted_green">
                 <TypeAnimation
-                    sequence={[
-                        `"Student"`,
-                        1000,
-                        `"Vývojář"`,
-                        1000,
-                        `"Grafik"`,
-                        1000
-                    ]}
+                    sequence={focusSequence}
                     wrapper="span"
                     speed={200}
                     style={{ display: 'inline-block' }}
@@ -36,6 +32,10 @@ function Homepage() {
                     </div>
                     <div className="hero-image"></div>
                 </section>
+
+                <div className="gradient-container">
+                    <h1 className="animated-text">Tvojí animovaný text</h1>
+                </div>
             </Container>
         </div>
     );

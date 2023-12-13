@@ -18,11 +18,16 @@ function App() {
     return (
         <div>
             <Container>
+                <div className="light light-1"></div>
+                <div className="light light-2"></div>
+                <div className="light light-3"></div>
+
                 <NavigationMenu
                     scrollToAbout={() => scrollToSection(aboutRef)}
                 ></NavigationMenu>
-                <div className="background-effects"></div>
+
                 <Homepage></Homepage>
+
                 <div ref={aboutRef}>
                     <AboutMe />
                 </div>

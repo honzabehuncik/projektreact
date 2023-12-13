@@ -5,6 +5,12 @@ export const introdata = {
     third: "I develop mobile apps",
 };
 
+export const focusData = [
+    "Student",
+    "Vývojář",
+    "Grafik"
+];
+
 export const socials = {
     github: "https://github.com/honzabehuncik",
 };
