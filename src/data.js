@@ -14,3 +14,12 @@ export const focusData = [
 export const socials = {
     github: "https://github.com/honzabehuncik",
 };
+
+export const skills = {
+    html: "80%",
+    css: "80%",
+    react: "60%",
+    csharp: "60%",
+    sql: "70%",
+    php: "40%"
+}

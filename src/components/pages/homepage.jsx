@@ -33,9 +33,9 @@ function Homepage() {
                     <div className="hero-image"></div>
                 </section>
 
-                <div className="gradient-container">
+                {/*<div className="gradient-container">
                     <h1 className="animated-text">Tvojí animovaný text</h1>
-                </div>
+                </div>*/}
             </Container>
         </div>
     );
