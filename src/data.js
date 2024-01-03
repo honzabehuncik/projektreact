@@ -16,10 +16,10 @@ export const socials = {
 };
 
 export const skills = {
-    html: "80%",
-    css: "80%",
-    react: "60%",
-    csharp: "60%",
+    html: "86%",
+    css: "82%",
     sql: "70%",
+    react: "64%",
+    csharp: "58%",
     php: "40%"
 }
